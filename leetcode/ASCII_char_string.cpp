@@ -1,0 +1,1 @@
+string s (1,char('a' + i)) // type(i) == int
