@@ -1,8 +1,8 @@
 TARGET = xserver
 OBJS = xserver.o
-CXXFLAGS = -I../xthread
-LDFLAGS = -L../xthread
-LIBS = -lxthread -lpthread
+CXXFLAGS = -I../xthread -I../xcom
+LDFLAGS = -L../xthread -L../xcom
+LIBS = -lxthread -lpthread -lxcom
 $(TARGET):$(OBJS)
 	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
 clean:
